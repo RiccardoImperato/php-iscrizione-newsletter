@@ -1,3 +1,7 @@
+<?php
+$email = $_GET['email'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,6 +16,20 @@
 <body>
     <div class="container text-center">
         <h1 class="my-5">Iscrizione alla Newsletter</h1>
+        <form action="index.php" method="GET">
+            <label for="email">Inserisci la tua mail</label>
+            <input type="text" name="email" id="email">
+            <button class="btn btn-primary py-1">Avanti</button>
+        </form>
+        <div class="d-flex justify-content-center mt-4">
+            <?php
+            if ($email !== '' &&  str_contains($email, '.') && str_contains($email, '@')) {
+                echo "<div class='alert alert-success w-50' role='alert'> '{$email}' email valida</div>";
+            } elseif ($email !== '' &&  !str_contains($email, '.') && !str_contains($email, '@')) {
+                echo "<div class='alert alert-primary w-50' role='alert'> '{$email}' email non valida, deve avere @ e .</div>";
+            }
+            ?>
+        </div>
     </div>
 </body>
 
