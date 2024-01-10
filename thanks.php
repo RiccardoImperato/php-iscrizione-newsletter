@@ -1,5 +1,5 @@
 <?php
-include __DIR__ . './functions.php'
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -14,16 +14,10 @@ include __DIR__ . './functions.php'
 </head>
 
 <body>
-    <div class="container text-center">
-        <h1 class="my-5">Iscrizione alla Newsletter</h1>
-        <form action="index.php" method="GET">
-            <label for="email">Inserisci la tua mail</label>
-            <input type="text" name="email" id="email">
-            <button class="btn btn-primary py-1">Avanti</button>
-        </form>
-        <div class="d-flex justify-content-center mt-4">
+    <div class="d-flex justify-content-center mt-5">
+        <div class='alert alert-success w-auto' role='alert'>
             <?php
-            showAlert($email);
+            echo "Grazie per esserti iscritto, {$_SESSION['email']}";
             ?>
         </div>
     </div>
