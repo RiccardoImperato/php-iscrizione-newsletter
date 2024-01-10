@@ -1,5 +1,5 @@
 <?php
-$email = $_GET['email'];
+include './functions.php'
 ?>
 
 <!DOCTYPE html>
@@ -23,11 +23,7 @@ $email = $_GET['email'];
         </form>
         <div class="d-flex justify-content-center mt-4">
             <?php
-            if ($email !== '' &&  str_contains($email, '.') && str_contains($email, '@')) {
-                echo "<div class='alert alert-success w-50' role='alert'> '{$email}' email valida</div>";
-            } elseif ($email !== '' &&  !str_contains($email, '.') && !str_contains($email, '@')) {
-                echo "<div class='alert alert-primary w-50' role='alert'> '{$email}' email non valida, deve avere @ e .</div>";
-            }
+            showAlert($email);
             ?>
         </div>
     </div>
