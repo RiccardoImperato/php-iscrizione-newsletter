@@ -16,7 +16,7 @@ include __DIR__ . './functions.php'
 <body>
     <div class="container text-center">
         <h1 class="my-5">Iscrizione alla Newsletter</h1>
-        <form action="index.php" method="GET">
+        <form action="index.php" method="GET" class="d-flex justify-content-center align-items-center gap-4">
             <label for="email">Inserisci la tua mail</label>
             <input type="text" name="email" id="email">
             <button class="btn btn-primary py-1">Avanti</button>
