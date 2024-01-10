@@ -1,0 +1,4 @@
+# PHP iscrizione newsletter
+
+Pagina che simula l'iscrizione ad una newsletter realizzata con Bootstrap, nel campo di input l'utente può inserire la sua mail e cliccando sul bottone avanti, se la la mail è valida ovvero contiene sia @ che ., viene reindirizzato su un'altra pagina che mostra un messaggio di avvenuta registrazione, altrimenti viene mostrato in pagina il messaggio 'email non valida'.
+Il progetto è suddiviso in tre file php: il primo index.php, che contiene il codice HTML per gli input e PHP per includere il secondo file, functions.php che contiene la variabile $email (quella inserita dall'utente) e la funzione 'showAlert', che viene richiamata in index.php e che genera, in base al dato inserito (variabile $email passato come argomento della funzione), un'avviso se la mail non è valida, o reindirizza al terzo file thanks.php, che mostra il messaggio 'Grazie per esserti iscritto' e la mail insterita.          
