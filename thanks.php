@@ -1,5 +1,5 @@
 <?php
-session_start();
+require_once __DIR__ . '/functions.php';
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +17,7 @@ session_start();
     <div class="d-flex justify-content-center mt-5">
         <div class='alert alert-success w-auto' role='alert'>
             <?php
-            echo "Grazie per esserti iscritto, {$_SESSION['email']}";
+            echo 'Grazie per esserti iscritto';
             ?>
         </div>
     </div>

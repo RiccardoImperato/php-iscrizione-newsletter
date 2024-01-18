@@ -1,5 +1,8 @@
 <?php
-include __DIR__ . './functions.php'
+require_once __DIR__ . './functions.php';
+
+$email = $_GET['email'];
+
 ?>
 
 <!DOCTYPE html>

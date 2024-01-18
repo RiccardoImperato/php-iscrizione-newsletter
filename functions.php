@@ -1,8 +1,7 @@
 <?php
 session_start();
 
-$email = $_GET['email'];
-$_SESSION['email'] = $email;
+$email = $_SESSION['email'];
 
 // Funzione per generare l'alert 
 function showAlert($arg)
