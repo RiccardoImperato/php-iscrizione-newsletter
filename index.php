@@ -13,9 +13,10 @@ if (!empty($_GET['email'])) {
         $_SESSION['email'] = $email;
         header('Location: thanks.php');
         die;
-    };
+    } else {
+        $error = true;
+    }
 };
-
 
 ?>
 
@@ -39,9 +40,11 @@ if (!empty($_GET['email'])) {
             <button class="btn btn-primary py-1">Avanti</button>
         </form>
         <div class="d-flex justify-content-center mt-4">
-            <?php
-
-            ?>
+            <?php if ($error === true) : ?>
+                <div class="alert alert-primary mt-3" role="alert">
+                    <?php echo 'Email non valida'; ?>
+                </div>
+            <?php endif ?>
         </div>
     </div>
 </body>
