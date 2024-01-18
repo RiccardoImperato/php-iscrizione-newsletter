@@ -1,7 +1,21 @@
 <?php
+session_start();
 require_once __DIR__ . './functions.php';
 
-$email = $_GET['email'];
+$email = '';
+$error = null;
+
+if (!empty($_GET['email'])) {
+
+    $email = $_GET['email'];
+
+    if (checkEmail($email)) {
+        $_SESSION['email'] = $email;
+        header('Location: thanks.php');
+        die;
+    };
+};
+
 
 ?>
 
@@ -26,7 +40,7 @@ $email = $_GET['email'];
         </form>
         <div class="d-flex justify-content-center mt-4">
             <?php
-            showAlert($email);
+
             ?>
         </div>
     </div>

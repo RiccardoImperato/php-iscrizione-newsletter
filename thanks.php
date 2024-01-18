@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 require_once __DIR__ . '/functions.php';
 ?>
 
@@ -17,7 +19,7 @@ require_once __DIR__ . '/functions.php';
     <div class="d-flex justify-content-center mt-5">
         <div class='alert alert-success w-auto' role='alert'>
             <?php
-            echo 'Grazie per esserti iscritto';
+            echo 'Grazie per esserti iscritto' . " " . $_SESSION['email'];
             ?>
         </div>
     </div>
